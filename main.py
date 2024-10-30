@@ -16,3 +16,4 @@ NC_required = (desired_final_grade - NL * 0.3) / 0.7
 C3_required = NC_required * 3 - (C1 + C2)
 
 # Print the required grade for the third exam
+print(f"You need a grade of {C3_required:.2f} in exam 3.")
