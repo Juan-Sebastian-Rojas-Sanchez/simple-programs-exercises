@@ -1,19 +1,19 @@
-#Que nota nesecito
-# Get input from the user
-C1 = float(input("Enter grade for exam 1: "))
-C2 = float(input("Enter grade for exam 2: "))
-NL = float(input("Enter lab grade: "))
+import math
+TO = float(input("Temperatura original del huevo\n")) #Temperatura original del huevo
+TW = 100 #Temperatura del agua para alcanzar la ebullición
+TY = 70 #Temperatura de la yema para coagularse 
+M = 67 #Masa del huevo 47 = pequeño y 67 grande
+P = 1.038 #Constante de la formula = densidad del huevo
+C = 3.7 #Constante de la formula = capacidad calorífica del huevo
+K = 5.4 * math.pow(10, -3) #Constante de la formula = conductividad térmica del huevo
+dividendo = math.pow(M, (2/3)) * (C * (math.pow(P, (1/3))))
+divisor = (K * math.pow(math.pi, 2)) * math.pow((4*math.pi) / 3, (2/3))
+resultado = dividendo / divisor
 
-# Desired final grade
-desired_final_grade = 60
+resultado2 = math.log(0.76 * ((TO - TW) / (TY - TW)))
 
-# Calculate the required grade for the third exam
-# Using the formula NF = NC * 0.7 + NL * 0.3
-# We can derive NC = (desired_final_grade - NL * 0.3) / 0.7
-NC_required = (desired_final_grade - NL * 0.3) / 0.7
+segundos = resultado * resultado2
+#minutos = round(segundos/60)
 
-# Calculate the required grade for the third exam
-C3_required = NC_required * 3 - (C1 + C2)
-
-# Print the required grade for the third exam
-print(f"You need a grade of {C3_required:.2f} in exam 3.")
+print(f"El tiempo máxima para prepararlo a la copa {segundos} segundos")
+#print(f"El tiempo máxima para prepararlo a la copa {minutos} minutos")
