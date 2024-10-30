@@ -1,12 +1,14 @@
-#pitagoras
-import math
+#Hora futura
+#  Get the current hour and number of hours from the user
+current_hour = int(input("Current hour: "))
+hours_to_add = int(input("Number of hours: "))
 
-# Get input from the user
-a = float(input("Enter leg a: "))
-b = float(input("Enter leg b: "))
+# Calculate the new hour
+new_hour = (current_hour + hours_to_add) % 12
 
-# Calculate the length of the hypotenuse
-c = math.sqrt(a**2 + b**2)
+# Adjust for 12 o'clock case
+if new_hour == 0:
+    new_hour = 12
 
 # Print the result
-print(f"The hypotenuse is {c}.")
+print(f"In {hours_to_add} hours, the clock will show {new_hour}.")
