@@ -1,14 +1,9 @@
-#Hora futura
-#  Get the current hour and number of hours from the user
-current_hour = int(input("Current hour: "))
-hours_to_add = int(input("Number of hours: "))
+#Parte decimal
+# Get input from the user
+number = float(input("Enter a number: "))
 
-# Calculate the new hour
-new_hour = (current_hour + hours_to_add) % 12
+# Calculate the decimal part
+decimal_part = number - int(number)
 
-# Adjust for 12 o'clock case
-if new_hour == 0:
-    new_hour = 12
-
-# Print the result
-print(f"In {hours_to_add} hours, the clock will show {new_hour}.")
+# Print the decimal part
+print(decimal_part)
