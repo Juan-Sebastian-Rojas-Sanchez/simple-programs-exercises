@@ -1,9 +1,6 @@
-#Conversión de unidades de longitud
+#Número invertido
 # Get input from the user
-cm_value = float(input("Enter the value in centimeters: "))
+number = input("Enter number: ")
 
-# Convert centimeters to inches
-inches_value = cm_value / 2.54
-
-# Print the result
-print(f"{cm_value} cm is equal to {inches_value:.2f} inches.")
+# Reverse and print the number
+print(number[::-1])
